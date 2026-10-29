@@ -2,3 +2,4 @@ streamlit
 bandit
 pytest
 python-dotenv
+google-genai
