@@ -474,13 +474,13 @@ def format_report_markdown(report: Dict[str, Any]) -> str:
     tests = checks["functional_tests"]
 
     verdict_badge = {
-        "VERIFIED_SECURE": "✅ VERIFIED SECURE",
-        "PARTIALLY_VERIFIED": "⚠️ PARTIALLY VERIFIED",
-        "VERIFICATION_FAILED": "❌ VERIFICATION FAILED",
+        "VERIFIED_SECURE": "[VERIFIED SECURE]",
+        "PARTIALLY_VERIFIED": "[PARTIALLY VERIFIED]",
+        "VERIFICATION_FAILED": "[VERIFICATION FAILED]",
     }.get(report["verdict"], report["verdict"])
 
     lines = [
-        "# 🛡️ SecureCodeAgent - Patch Verification Report",
+        "# SecureCodeAgent - Patch Verification Report",
         "",
         f"**Timestamp:** `{report['timestamp']}`  ",
         f"**Original File:** `{files['original_file']}`  ",
@@ -491,7 +491,7 @@ def format_report_markdown(report: Dict[str, Any]) -> str:
         "",
         "---",
         "### 1. Syntax Check",
-        f"- **Status:** {'✅ PASSED' if syntax['passed'] else '❌ FAILED'}",
+        f"- **Status:** {'[PASSED]' if syntax['passed'] else '[FAILED]'}",
     ]
 
     if not syntax["passed"]:
@@ -518,7 +518,7 @@ def format_report_markdown(report: Dict[str, Any]) -> str:
             lines.append(f"  - `[{f.get('test_id')}]` {f.get('issue')} (Line {f.get('line_number')})")
 
     if sec["new_findings"]:
-        lines.append("\n**⚠️ Newly Introduced Issues:**")
+        lines.append("\n**[!] Newly Introduced Issues:**")
         for f in sec["new_findings"]:
             lines.append(f"  - `[{f.get('test_id')}]` {f.get('issue')} (Line {f.get('line_number')})")
 
@@ -538,6 +538,12 @@ def format_report_markdown(report: Dict[str, Any]) -> str:
 
 if __name__ == "__main__":
     import argparse
+
+    # Ensure UTF-8 output encoding across Windows consoles
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
     parser = argparse.ArgumentParser(
         description="Verify an AI-generated security patch against syntax, security, and tests."
