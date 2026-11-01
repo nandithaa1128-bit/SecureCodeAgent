@@ -1,0 +1,419 @@
+{
+  "generated_at": "2026-11-01T05:39:52.809819+00:00",
+  "summary": {
+    "prompt_version_attempt_1": "optimized-rootcause-v2",
+    "model": "openai/gpt-oss-120b",
+    "max_attempts": 2,
+    "samples_total": 10,
+    "samples_evaluated": 10,
+    "samples_skipped_or_errored": 0,
+    "first_attempt_verified": 9,
+    "verified_within_attempts": 10,
+    "first_attempt_success_rate": 0.9,
+    "two_attempt_success_rate": 1.0,
+    "original_findings_total": 36,
+    "original_findings_resolved_final": 36,
+    "new_findings_final": 0,
+    "syntax_valid_rate": 1.0,
+    "generation_latency_seconds_total": 114.534,
+    "attempts_with_latency": 11,
+    "tokens_total": 35234,
+    "attempts_with_token_usage": 11,
+    "functional_tests_status_counts": {
+      "SKIPPED": 10
+    },
+    "note": "Functional test results exist only when a user-supplied test file was run; otherwise the status is SKIPPED."
+  },
+  "samples": [
+    {
+      "sample": "sample_01_command_injection.py",
+      "sha256": "b9cdef34c5fc53cb",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 5.808,
+          "token_usage": {
+            "prompt_tokens": 2139,
+            "completion_tokens": 2421,
+            "total_tokens": 4560
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_02_hardcoded_secrets.py",
+      "sha256": "a3ec5493623b153d",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 4.008,
+          "token_usage": {
+            "prompt_tokens": 1686,
+            "completion_tokens": 1613,
+            "total_tokens": 3299
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_03_deserialization.py",
+      "sha256": "2356c5f6f488943c",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 3.044,
+          "token_usage": {
+            "prompt_tokens": 1452,
+            "completion_tokens": 1211,
+            "total_tokens": 2663
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_04_weak_crypto_random.py",
+      "sha256": "667b5e7fc8884e0d",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 2.829,
+          "token_usage": {
+            "prompt_tokens": 1676,
+            "completion_tokens": 1083,
+            "total_tokens": 2759
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_05_sql_injection.py",
+      "sha256": "423bf15266c066e1",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 2.411,
+          "token_usage": {
+            "prompt_tokens": 1534,
+            "completion_tokens": 784,
+            "total_tokens": 2318
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_06_tempfiles_urls.py",
+      "sha256": "3228f6a848f83d91",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 2,
+      "first_attempt_verified": false,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "VERIFICATION_FAILED",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 2.759,
+          "token_usage": {
+            "prompt_tokens": 1393,
+            "completion_tokens": 1046,
+            "total_tokens": 2439
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 2,
+          "unresolved_count": 1,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        },
+        {
+          "attempt": 2,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "feedback-v2",
+          "latency_seconds": 75.22,
+          "token_usage": {
+            "prompt_tokens": 1811,
+            "completion_tokens": 1260,
+            "total_tokens": 3071
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_07_eval_exec.py",
+      "sha256": "c721ff1788db02d2",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 5.515,
+          "token_usage": {
+            "prompt_tokens": 1304,
+            "completion_tokens": 2048,
+            "total_tokens": 3352
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_08_mixed_misc.py",
+      "sha256": "e0455ae4e97282c9",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 4.003,
+          "token_usage": {
+            "prompt_tokens": 1614,
+            "completion_tokens": 1304,
+            "total_tokens": 2918
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_09_inventory.py",
+      "sha256": "605808b053d0ec19",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 6,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 6,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 4.418,
+          "token_usage": {
+            "prompt_tokens": 2574,
+            "completion_tokens": 1823,
+            "total_tokens": 4397
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 6,
+          "resolved_count": 6,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_10_command_secret.py",
+      "sha256": "4a72c29e3b74859f",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 2,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 2,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "optimized-rootcause-v2",
+          "latency_seconds": 4.519,
+          "token_usage": {
+            "prompt_tokens": 1579,
+            "completion_tokens": 1879,
+            "total_tokens": 3458
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 2,
+          "resolved_count": 2,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    }
+  ]
+}

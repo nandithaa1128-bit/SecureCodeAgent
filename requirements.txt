@@ -1,5 +1,8 @@
-streamlit
+
 bandit
 pytest
 python-dotenv
 google-genai
+fastapi
+uvicorn[standard]
+python-multipart

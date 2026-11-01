@@ -1,8 +1,33 @@
-.venv/
-venv/
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache
 __pycache__/
 *.py[cod]
-.env
-reports/*
-!reports/.gitkeep
 .pytest_cache/
+.venv/
+venv/
+
+# Node dependencies
+node_modules/
+
+# Frontend build output
+frontend/dist/
+
+# Generated workflow files
+reports/workflows/
+
+# Generated repair artifacts
+reports/feedback_patch_*.py
+reports/feedback_report_*.md
+reports/generated_tests_*.py
+reports/patched_*.py
+reports/repair_log.jsonl
+reports/fallback_verification_report.md
+reports/verification_report.md
+reports/__pycache__/
+
+# Editor files
+.vscode/
