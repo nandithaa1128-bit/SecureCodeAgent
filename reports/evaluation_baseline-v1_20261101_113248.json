@@ -1,0 +1,459 @@
+{
+  "generated_at": "2026-11-01T06:02:48.302296+00:00",
+  "summary": {
+    "prompt_version_attempt_1": "baseline-v1",
+    "model": "openai/gpt-oss-120b",
+    "max_attempts": 2,
+    "samples_total": 10,
+    "samples_evaluated": 10,
+    "samples_skipped_or_errored": 0,
+    "first_attempt_verified": 7,
+    "verified_within_attempts": 10,
+    "first_attempt_success_rate": 0.7,
+    "two_attempt_success_rate": 1.0,
+    "original_findings_total": 36,
+    "original_findings_resolved_final": 36,
+    "new_findings_final": 0,
+    "syntax_valid_rate": 1.0,
+    "generation_latency_seconds_total": 44.31,
+    "attempts_with_latency": 13,
+    "tokens_total": 25977,
+    "attempts_with_token_usage": 13,
+    "functional_tests_status_counts": {
+      "SKIPPED": 10
+    },
+    "note": "Functional test results exist only when a user-supplied test file was run; otherwise the status is SKIPPED."
+  },
+  "samples": [
+    {
+      "sample": "sample_01_command_injection.py",
+      "sha256": "b9cdef34c5fc53cb",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 2,
+      "first_attempt_verified": false,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "VERIFICATION_FAILED",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 1.81,
+          "token_usage": {
+            "prompt_tokens": 325,
+            "completion_tokens": 474,
+            "total_tokens": 799
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 3,
+          "unresolved_count": 1,
+          "new_issues_count": 6,
+          "functional_tests_status": "SKIPPED"
+        },
+        {
+          "attempt": 2,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "feedback-v2",
+          "latency_seconds": 6.797,
+          "token_usage": {
+            "prompt_tokens": 3370,
+            "completion_tokens": 2447,
+            "total_tokens": 5817
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_02_hardcoded_secrets.py",
+      "sha256": "a3ec5493623b153d",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 1.893,
+          "token_usage": {
+            "prompt_tokens": 364,
+            "completion_tokens": 644,
+            "total_tokens": 1008
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_03_deserialization.py",
+      "sha256": "2356c5f6f488943c",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 2.257,
+          "token_usage": {
+            "prompt_tokens": 324,
+            "completion_tokens": 845,
+            "total_tokens": 1169
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_04_weak_crypto_random.py",
+      "sha256": "667b5e7fc8884e0d",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 7.171,
+          "token_usage": {
+            "prompt_tokens": 359,
+            "completion_tokens": 567,
+            "total_tokens": 926
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_05_sql_injection.py",
+      "sha256": "423bf15266c066e1",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 1.795,
+          "token_usage": {
+            "prompt_tokens": 347,
+            "completion_tokens": 365,
+            "total_tokens": 712
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_06_tempfiles_urls.py",
+      "sha256": "3228f6a848f83d91",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 2,
+      "first_attempt_verified": false,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "VERIFICATION_FAILED",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 2.153,
+          "token_usage": {
+            "prompt_tokens": 304,
+            "completion_tokens": 718,
+            "total_tokens": 1022
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 2,
+          "unresolved_count": 1,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        },
+        {
+          "attempt": 2,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "feedback-v2",
+          "latency_seconds": 3.414,
+          "token_usage": {
+            "prompt_tokens": 1903,
+            "completion_tokens": 1424,
+            "total_tokens": 3327
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_07_eval_exec.py",
+      "sha256": "c721ff1788db02d2",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 3,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 3,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 2.994,
+          "token_usage": {
+            "prompt_tokens": 283,
+            "completion_tokens": 1159,
+            "total_tokens": 1442
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 3,
+          "resolved_count": 3,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_08_mixed_misc.py",
+      "sha256": "e0455ae4e97282c9",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 4,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 4,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 1.934,
+          "token_usage": {
+            "prompt_tokens": 358,
+            "completion_tokens": 637,
+            "total_tokens": 995
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 4,
+          "resolved_count": 4,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_09_inventory.py",
+      "sha256": "605808b053d0ec19",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 6,
+      "attempts_used": 1,
+      "first_attempt_verified": true,
+      "verified_within_attempts": true,
+      "resolved_findings": 6,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 2.212,
+          "token_usage": {
+            "prompt_tokens": 477,
+            "completion_tokens": 814,
+            "total_tokens": 1291
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 6,
+          "resolved_count": 6,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    },
+    {
+      "sample": "sample_10_command_secret.py",
+      "sha256": "4a72c29e3b74859f",
+      "status": "COMPLETED",
+      "final_verdict": "REPAIR_SUCCESSFUL",
+      "original_findings": 2,
+      "attempts_used": 2,
+      "first_attempt_verified": false,
+      "verified_within_attempts": true,
+      "resolved_findings": 2,
+      "unresolved_findings": 0,
+      "new_findings": 0,
+      "functional_tests_status": "SKIPPED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "verdict": "VERIFICATION_FAILED",
+          "prompt_version": "baseline-v1",
+          "latency_seconds": 5.023,
+          "token_usage": {
+            "prompt_tokens": 659,
+            "completion_tokens": 1916,
+            "total_tokens": 2575
+          },
+          "api_calls": 2,
+          "format_retries": 1,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 2,
+          "resolved_count": 1,
+          "unresolved_count": 1,
+          "new_issues_count": 1,
+          "functional_tests_status": "SKIPPED"
+        },
+        {
+          "attempt": 2,
+          "verdict": "REPAIR_SUCCESSFUL",
+          "prompt_version": "feedback-v2",
+          "latency_seconds": 4.857,
+          "token_usage": {
+            "prompt_tokens": 2922,
+            "completion_tokens": 1972,
+            "total_tokens": 4894
+          },
+          "api_calls": 1,
+          "format_retries": 0,
+          "patch_validation_passed": true,
+          "syntax_passed": true,
+          "original_count": 2,
+          "resolved_count": 2,
+          "unresolved_count": 0,
+          "new_issues_count": 0,
+          "functional_tests_status": "SKIPPED"
+        }
+      ],
+      "generation_error": null
+    }
+  ]
+}

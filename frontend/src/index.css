@@ -1,0 +1,32 @@
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #20243a;
+  background: #f5f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
