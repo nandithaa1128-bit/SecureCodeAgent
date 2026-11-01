@@ -1,8 +1,7 @@
-
 bandit
 pytest
 python-dotenv
-google-genai
+groq
 fastapi
 uvicorn[standard]
 python-multipart
